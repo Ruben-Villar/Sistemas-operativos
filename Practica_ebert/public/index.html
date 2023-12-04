@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de estudiantes</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de estudiantes</h1>
+    <form action="/valida" method="POST">
+      <div class="form-group">
+        <label for="carrera">Carrera profesional</label>
+        <select name="carrera" id="carrera">
+          <option value="Análisis de Sistemas">Análisis de Sistemas</option>
+          <option value="Producción Agraria">Producción Agraria</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" id="apellidos" required>
+      </div>
+      <div class="form-group">
+        <label for="nombres">Nombres</label>
+        <input type="text" name="nombres" id="nombres" required>
+      </div>
+      <div class="form-group">
+        <label for="dni">Número de DNI</label>
+        <input type="number" name="dni" id="dni" required>
+      </div>
+      <div class="form-group">
+        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+        <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+      </div>
+      <div class="form-group">
+        <label for="correo_institucional">Correo institucional</label>
+        <input type="email" name="correo_institucional" id="correo_institucional" required>
+      </div>
+      <div class="form-group">
+        <label for="contraseña">Contraseña</label>
+        <input type="password" name="contraseña" id="contraseña" required>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" name="terminos_condiciones" id="terminos_condiciones">
+        <label for="terminos_condiciones">Acepto los términos y condiciones</label>
+      </div>
+      <button type="submit">Registrar</button>
+    </form>
+  </div>
+</body>
+</html>
