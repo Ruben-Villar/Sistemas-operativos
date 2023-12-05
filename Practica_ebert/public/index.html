@@ -8,7 +8,7 @@
 <body>
   <div class="container">
     <h1>Registro de estudiantes</h1>
-    <form action="/valida" method="POST">
+    <form action="/valida" method="POST" id="formulario">
       <div class="form-group">
         <label for="carrera">Carrera profesional</label>
         <select name="carrera" id="carrera">
@@ -16,36 +16,52 @@
           <option value="Producción Agraria">Producción Agraria</option>
         </select>
       </div>
-      <div class="form-group">
-        <label for="apellidos">Apellidos</label>
-        <input type="text" name="apellidos" id="apellidos" required>
+      <div class="form-control">
+        <label for="apellidos" class="formulario_label">Apellidos</label>
+        <input type="text" name="apellidos" id="apellidos" >
+        <p></p>
       </div>
-      <div class="form-group">
-        <label for="nombres">Nombres</label>
-        <input type="text" name="nombres" id="nombres" required>
+
+      <div class="form-control">
+        <label for="nombres" class="formulario_label">Nombres</label>
+        <input type="text" name="nombres" id="nombres" >
+        <p></p>
       </div>
-      <div class="form-group">
-        <label for="dni">Número de DNI</label>
-        <input type="number" name="dni" id="dni" required>
+
+      <div class="form-control">
+        <label for="dni" class="formulario_label">Número de DNI</label>
+        <input type="number" name="dni" id="dni" >
+        <p></p>
       </div>
-      <div class="form-group">
-        <label for="fecha_nacimiento">Fecha de nacimiento</label>
-        <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+
+      <div class="form-control">
+        <label for="fecha_nacimiento" class="formulario_label">Fecha de nacimiento</label>
+        <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" >
+        <p></p>
       </div>
-      <div class="form-group">
-        <label for="correo_institucional">Correo institucional</label>
-        <input type="email" name="correo_institucional" id="correo_institucional" required>
+
+      <div class="form-control">
+        <label for="correo_institucional" class="formulario_label">Correo institucional</label>
+        <input type="email" name="correo_institucional" id="correo_institucional" >
+        <p></p>
       </div>
-      <div class="form-group">
-        <label for="contraseña">Contraseña</label>
-        <input type="password" name="contraseña" id="contraseña" required>
+
+      <div class="form-control">
+        <label for="contraseña" class="formulario_label">Contraseña</label>
+        <input type="password" name="contraseña" id="contraseña" >
+        <img src="/public/img/descarga.png" id="icono-ojo" class="ojos" alt="Mostrar contraseña" />
+        <p></p>
       </div>
+
       <div class="form-group">
         <input type="checkbox" name="terminos_condiciones" id="terminos_condiciones">
         <label for="terminos_condiciones">Acepto los términos y condiciones</label>
       </div>
       <button type="submit">Registrar</button>
     </form>
+
+    <script src="/public/js/restriccion.js"></script>
+    <script src="/public/js/contraseña.js"></script>
   </div>
 </body>
 </html>
